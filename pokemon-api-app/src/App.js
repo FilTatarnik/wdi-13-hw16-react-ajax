@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import Login from './Login';
+import MainContainer from './MainContainer';
+// import PokeList from './PokeList';
 import './App.css';
 
 class App extends Component {
@@ -11,11 +13,19 @@ class App extends Component {
       number: []
     }
   }
+  handleLogin = (username, isLoggedIn) => {
+      console.log(username, isLoggedIn);
+
+      this.setState({
+        username: username,
+        logged: isLoggedIn
+      })
+  }
   render() {
     return (
       <div className="App">
         <h1>PokeList</h1>
-        <Login />
+        {this.state.logged ? <MainContainer username={this.state.username}/> : <Login handleLogin={this.handleLogin} />}
       </div>
     );
   }
