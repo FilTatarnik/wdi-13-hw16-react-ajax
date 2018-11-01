@@ -24,7 +24,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>PokeList</h1>
+        <h1>PokeList React App</h1>
         { this.state.logged ? <MainContainer username={ this.state.username }/> : <Login handleLogin={ this.handleLogin } />}
       </div>
     );

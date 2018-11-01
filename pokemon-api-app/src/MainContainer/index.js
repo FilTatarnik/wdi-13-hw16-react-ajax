@@ -30,7 +30,7 @@ class MainContainer extends Component {
     // ajax call
 
      this.getPokemon().then((pokemon) => {
-        console.log(pokemon.results, "this is what came back from the ajax call in componentDidMount in MainConatinar");
+        // console.log(pokemon.results, "this is what came back from the ajax call in componentDidMount in MainConatinar");
 
         this.setState({
           pokemon: pokemon.results
@@ -39,7 +39,7 @@ class MainContainer extends Component {
 
   }
     render(){
-      console.log(this.state.pokemon);
+      // console.log(this.state.pokemon);
         return(
           <div>
             <h1>Main Container</h1>

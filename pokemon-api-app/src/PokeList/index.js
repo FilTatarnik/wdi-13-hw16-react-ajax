@@ -7,11 +7,13 @@ class PokeList extends Component {
 
     	// create an array of elements using .map
     	// const thePikes = asdfasdfasdf.mpasdf
-
+    	const thePokes = this.props.pokemon.map((thePokes, i) => {
+    			// console.log(thePokes);
+    	})
         return(
         	<div>
 	            <h1>pokelist</h1>
-	            {thePokes}
+	            {this.props.PokeList}
             </div>
         )
     }
