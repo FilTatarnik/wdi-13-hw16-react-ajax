@@ -25,7 +25,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>PokeList</h1>
-        {this.state.logged ? <MainContainer username={this.state.username}/> : <Login handleLogin={this.handleLogin} />}
+        { this.state.logged ? <MainContainer username={ this.state.username }/> : <Login handleLogin={ this.handleLogin } />}
       </div>
     );
   }
