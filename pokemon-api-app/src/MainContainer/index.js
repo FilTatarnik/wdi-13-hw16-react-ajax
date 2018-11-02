@@ -20,7 +20,7 @@ class MainContainer extends Component {
       // So we have to parse that into a regular object, so we can use it.
       const pokemonJson = await pokemon.json();
       return pokemonJson;
-
+      // console.log(pokemon.results);
     }catch(err){
       return err
     }
@@ -39,12 +39,13 @@ class MainContainer extends Component {
 
   }
     render(){
-      // console.log(this.state.pokemon);
+      // console.log(PokeList.props);
+      console.log(this.state.pokemon);
         return(
           <div>
-            <h1>Main Container</h1>
-              <PokeList pokemon={this.state.pokemon} />
-              <h1>hello, {this.props.username}</h1>
+            <h1>Hello {this.props.username}</h1>
+            <h1>Pokemon Below</h1>
+            <PokeList pokemon={this.state.pokemon} />
           </div>
         )
     }
